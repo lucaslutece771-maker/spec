@@ -65,13 +65,13 @@
   <script>
     function validarSenha() {
       const senha = document.getElementById("senha").value;
-      const senhaCorreta = "7351"; // defina aqui o código correto
+      const senhaCorreta = "7351";
 
       if (senha.length !== 4) {
         alert("Digite exatamente 4 dígitos.");
       } else if (senha === senhaCorreta) {
         alert("Código correto! Redirecionando...");
-        window.location.href = "./spectre.html"; // substitua pelo destino desejado
+        window.location.href = "./spectre.html";
       } else {
         alert("Código incorreto. Tente novamente.");
       }

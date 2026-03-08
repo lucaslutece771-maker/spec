@@ -3,9 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SP3C</title>
+    <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página com 3 imagens</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: monospace;
+      background: black;
+      color: #00ff00;
+      overflow: hidden;
+    }
+
+    /* Fundo animado estilo terminal */
+    .terminal-bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  opacity: 0.2;
+  color: #00ff00;
+  font-family: monospace;
+}
+
+.scroll {
+  display: inline-block;
+  animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+  from { transform: translateY(0); }
+  to { transform: translateY(-50%); }
+}
+
+    /* Container das imagens */
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      gap: 20px;
+    }
+
+    .image-slot {
+      width: 80%;
+      max-width: 300px;
+      height: 150px;
+      border: 2px dashed #00ff00;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #00ff00;
+    }
+  </style>
 </head>
 <body>
-    
+  <div class="terminal-bg">
+  <div class="scroll">
+    <p>
+      > carregando sistema...  
+      > inicializando módulos...  
+      > aguardando entrada...  
+      > ██████████████████████  
+    </p>
+    <p>
+      > carregando sistema...  
+      > inicializando módulos...  
+      > aguardando entrada...  
+      > ██████████████████████  
+    </p>
+    <p>
+  > conectando ao servidor...  
+  > autenticação concluída...  
+  > inicializando interface gráfica...  
+  > carregando módulos de segurança...  
+  > verificando integridade do sistema...  
+  > conexão estável estabelecida...  
+  > aguardando comandos do usuário...  
+  > ██████████████████████  
+</p>
+
+<p>
+  > varredura de pacotes iniciada...  
+  > 1024 pacotes recebidos...  
+  > checksum validado...  
+  > processo concluído com sucesso...  
+  > liberando memória temporária...  
+  > pronto para próxima operação...  
+  > ██████████████████████  
+</p>
+<p>
+  > inicializando sistema operacional: ОС СССР v1.0  
+  > проверка памяти... ОК  
+  > загрузка драйверов periféricos...  
+  > подключение к сети ГОСТ...  
+  > статус: соединение установлено  
+  > ██████████████████████  
+</p>
+
+<p>
+  > авторизация пользователя: comrade  
+  > ввод пароля... ********  
+  > доступ разрешён  
+  > запуск программы мониторинга  
+  > режим: наблюдение активен  
+  > ██████████████████████  
+</p>
+
+<p>
+  > компиляция ядра... завершено  
+  > инициализация протокола связи  
+  > канал защищён: ГОСТ 28147-89  
+  > передача пакетов: стабильна  
+  > ожидание новых команд...  
+  > ██████████████████████  
+</p>
+
+<p>
+  > загрузка модуля КГБ-SEC  
+  > проверка целостности системы...  
+  > ошибок не обнаружено  
+  > система готова к работе  
+  > standby...  
+  > ██████████████████████  
+</p>
+
+<p>
+  > echo "Привет, товарищ!"  
+  > ls /home/comrade  
+  > config.sys найден  
+  > выполнение скрипта init.sh  
+  > процесс завершён успешно  
+  > ██████████████████████  
+</p>
+
+  </div>
+</div>
+
+  <div class="container">
+    <div class="image-slot">Imagem 1</div>
+    <div class="image-slot">Imagem 2</div>
+    <div class="image-slot">Imagem 3</div>
+  </div>
 </body>
 </html>
