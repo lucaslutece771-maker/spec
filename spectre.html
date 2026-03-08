@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Domain</title>
+</head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background-image: url(./images/B.webp);
+    }
+    .banner {
+      width: 100%;
+      height: 200px;
+      background-color: #373b4b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .banner img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      padding: 10px;
+    }
+    .galeria img {
+      width: 150px;
+      height: 150px;
+      border-radius: 8px;
+    }
+    .senha {
+      margin: 20px;
+    }
+    .senha input {
+      font-size: 20px;
+      text-align: center;
+      letter-spacing: 10px;
+      width: 120px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="banner">
+    <img src="./images/book-cover-diary-journal-text-book-thumbnail.jpg" alt="Imagem destaque">
+  </div>
+  <div class="galeria">
+    <img src="./images/dom.jpg" alt="Imagem 1" width="100%" height="100%">
+    <img src="./images/Macbeth.jpg" alt="Imagem 2" width="100%" height="100%">
+    <img src="./images/R&J.png" alt="Imagem 3" width="100%" height="100%">
+    <img src="./images/evil.jpg" alt="Imagem 4" width="100%" height="100%">
+    <img src="./images/Postumas.png" alt="Imagem 5" width="100%" height="100%">
+    <img src="./images/Pedra.png" alt="Imagem 6" width="100%" height="100%">
+    <img src="./images/o-alienista.webp" alt="Imagem 7" width="100%" height="100%">
+    <img src="./images/reliquias.jpg" alt="Imagem 8" width="100%" height="100%">
+    <img src="./images/Rei Lear.jpg" alt="Imagem 9" width="100%" height="100%">
+    <img src="./images/silent.webp" alt="Imagem 10" width="100%" height="100%">
+    <img src="./images/3 bodys.jpg" alt="Imagem 11" width="100%" height="100%">
+    <img src="./images/Metro.png" alt="Imagem 12" width="100%" height="100%">
+  </div>
+
+  <div class="senha">
+    <input type="password" id="senha" maxlength="4" placeholder="****">
+    <br>
+    <button onclick="validarSenha()">Enviar</button>
+  </div>
+
+  <script>
+    function validarSenha() {
+      const senha = document.getElementById("senha").value;
+      const senhaCorreta = "4963";
+
+      if (senha.length !== 4) {
+        alert("Digite exatamente 4 dígitos.");
+      } else if (senha === senhaCorreta) {
+        alert("Senha correta! Acesso liberado.");
+        window.location.href = "./spectre2.html";
+      } else {
+        alert("Senha incorreta. Tente novamente.");
+      }
+    }
+  </script>
+
+
+</body>
+</html>
+</body>
+</html>
