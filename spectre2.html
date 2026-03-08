@@ -7,9 +7,6 @@
     <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página com 3 imagens</title>
   <style>
     body {
       margin: 0;
@@ -18,8 +15,6 @@
       color: #00ff00;
       overflow: hidden;
     }
-
-    /* Fundo animado estilo terminal */
     .terminal-bg {
   position: fixed;
   top: 0; left: 0;
@@ -40,27 +35,70 @@
   from { transform: translateY(0); }
   to { transform: translateY(-50%); }
 }
-
-    /* Container das imagens */
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      gap: 20px;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
     }
-
-    .image-slot {
-      width: 80%;
-      max-width: 300px;
-      height: 150px;
-      border: 2px dashed #00ff00;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #00ff00;
-    }
+.image-slot {
+  width: 80%;
+  max-width: 300px;
+  height: 150px;
+  border: 2px dashed #00ff00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00ff00;
+}
+.image-slot img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* mantém proporção sem cortar */
+}
+.terminal-input {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #000;
+  color: #00ff00;
+  font-family: monospace;
+  border: 2px solid #00ff00;
+  width: 80%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  gap: 10px;
+}
+.terminal-input input {
+  flex: 1;
+  padding: 8px;
+  background-color: #111;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  font-family: monospace;
+}
+.terminal-input button {
+  background-color: #222;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-family: monospace;
+}
+.saida {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #111;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  font-family: monospace;
+  width: 80%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
   </style>
 </head>
 <body>
@@ -145,11 +183,35 @@
 
   </div>
 </div>
-
   <div class="container">
-    <div class="image-slot">Imagem 1</div>
-    <div class="image-slot">Imagem 2</div>
-    <div class="image-slot">Imagem 3</div>
+    <div class="image-slot">
+        <img src="./images/decod image/jornal.png" alt="img">
+    </div>
+    <div class="image-slot">
+        <img src="./images/decod image/Puzzle.png" alt="img">
+    </div>
+    <div class="image-slot">
+        <img src="./images/decod image/Cartilha soviética c.png" alt="img">
+    </div>
   </div>
+  <div class="terminal-input">
+  <label for="auth">> Digite o comando:</label>
+  <input type="text" id="auth"/>
+  <button onclick="verificar()">AUTENTICAR</button>
+  <span id="resposta" class="saida"></span>
+</div>
+<div id="saida-terminal" class="saida"></div>
+<script>
+function verificar() {
+  const entrada = document.getElementById("auth").value.trim().toUpperCase();
+  const resposta = document.getElementById("resposta");
+
+  if (entrada === "BERNA") {
+    resposta.textContent = "8";
+  } else {
+    resposta.textContent = "> Comando inválido.";
+  }
+}
+</script>
 </body>
 </html>
